@@ -1,5 +1,5 @@
 import { User, Bot } from "lucide-react";
-import { useTypewriter } from "../hooks/useTypewriter";
+import { useTypewriter } from "../hooks/useTypeWriter";
 
 interface ChatMessageProps {
   role: "user" | "bot";
