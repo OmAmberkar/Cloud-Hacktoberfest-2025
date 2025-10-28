@@ -24,7 +24,7 @@ export default function Sidebar() {
           <Bot  size={22} />
           <div>
             <h1 className="text-2xl! font-extrabold tracking-widest">
-              DevOps Chatbot
+              Open DevOps Platform
             </h1>
             <p className="text-xs">v1.0</p>
             <p className="text-xs">For Engineers By Engineers</p>
