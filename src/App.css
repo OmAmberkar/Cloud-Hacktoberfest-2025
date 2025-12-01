@@ -15,8 +15,8 @@ body,
 #root {
   height: 100%;
 }
-/* Apply the chosen font to the body for consistent text rendering */
-body {
+/* Apply the chosen font to all  for consistent text rendering */
+* {
   font-family: 'SUSE Mono', monospace;
 }
 
