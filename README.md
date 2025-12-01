@@ -40,15 +40,31 @@ export default defineConfig([
       // other options...
     },
   },
-])
+]);
 ```
+
+# Responsive updates
+
+The app has been updated for responsiveness across common devices (desktop, laptop, tablet, and mobile):
+
+- Mobile-first layout using Tailwind CSS utilities in `src/App.tsx`.
+- Responsive global CSS in `src/index.css` (clamp-based typographic scaling and a container utility).
+- Minor layout tweaks in `src/App.css` to avoid overly broad global selectors and improve list and logo behavior.
+
+- Fix for mobile list numbers: ensured left alignment and padding so numbers never render off-screen.
+
+How to test locally:
+
+1. Install dependencies: `npm install`
+2. Start the dev server: `npm run dev`
+3. Open the site in the browser and use the Developer Tools to toggle device emulation or resize the window to confirm the layout adapts across breakpoints.
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -69,5 +85,5 @@ export default defineConfig([
       // other options...
     },
   },
-])
+]);
 ```

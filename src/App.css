@@ -1,13 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Kode+Mono:wght@400..700&family=Lexend:wght@100..900&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Science+Gothic:wght@100..900&family=VT323&display=swap');
-@import "tailwindcss";
+/* Tailwind directives are included in `src/index.css` to avoid duplication. */
 
-.suse-mono{
-  font-family: "SUSE Mono", sans-serif;
+/* Font declaration: SUSE Mono preferred for project; falls back to monospace. */
+.suse-mono {
+  font-family: 'SUSE Mono', monospace;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight: 300;
   font-style: normal;
 }
 
-*{
-  font-family: "SUSE Mono", sans-serif;
+/* Ensure the root fills the viewport so vertical centering works as expected */
+html,
+body,
+#root {
+  height: 100%;
+}
+/* Apply the chosen font to the body for consistent text rendering */
+body {
+  font-family: 'SUSE Mono', monospace;
+}
+
+/* Main content tweaks */
+
+/* Content helper classes: small padding on content and readable spacing for lists */
+.content {
+  padding: 0.25rem;
+}
+.content ol {
+  margin-left: 1rem;
+}
+.content li {
+  margin-bottom: 0.35rem;
+}
+
+/* Ensure the logo stays crisp and centered on small screens */
+.logo {
+  display: inline-block;
+}
+.logo img {
+  display: block;
+}
+
+/* Accessibility utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

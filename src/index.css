@@ -1,2 +1,106 @@
-@import "tailwindcss"
+@import 'tailwindcss';
 
+/* Global responsive settings (mobile-first) */
+:root {
+  --bg: #0f172a; /* tailwind slate-900 */
+  --fg: #ffffff;
+  --max-width: 1200px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive typographic scale using clamp() */
+html {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  line-height: 1.35;
+}
+body {
+  font-size: clamp(14px, 1.35vw, 18px);
+}
+
+/* Provide a consistent container that an app can rely on */
+.container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Make the ordered list readable on all screen sizes */
+.content ol {
+  margin: 0.5rem 0 0 1.15rem;
+  padding: 0;
+}
+
+/* Ensure the numbered list markers remain visible on small screens
+   We use list-outside with a left padding so numbers don't flow off-screen. */
+.content ol {
+  list-style-position: outside;
+  padding-left: 1.25rem; /* small left padding so the number is always visible */
+}
+
+/* Logo responsiveness when not using utility classes */
+.logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Accessibility helpers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Small devices adjustments */
+@media (max-width: 640px) {
+  :root {
+    --max-width: 520px;
+  }
+  body {
+    font-size: clamp(13px, 2.4vw, 16px);
+  }
+}
+
+/* Medium devices adjustments */
+@media (min-width: 768px) {
+  :root {
+    --max-width: 960px;
+  }
+  body {
+    font-size: clamp(15px, 1.2vw, 18px);
+  }
+}
+
+/* Large devices adjustments */
+@media (min-width: 1280px) {
+  :root {
+    --max-width: 1200px;
+  }
+}
