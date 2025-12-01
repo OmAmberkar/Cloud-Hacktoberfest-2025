@@ -30,25 +30,22 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "git-format-staged": "^3.1.1",
     "globals": "^16.5.0",
+    "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.3",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "pretty-quick": "^4.2.2",
-    "simple-git-hooks": "^2.13.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
   },
-  "line-staged": {
+  "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "*.{json,css,md,html}": "prettier --write",
-    "simple-git-hooks": {
-      "pre-commit": "yarn pretty-quick --staged"
-    }
+    "*.{json,css,md,html}": "prettier --write"
   }
 }
